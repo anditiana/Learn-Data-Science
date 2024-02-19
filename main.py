@@ -1,36 +1,31 @@
-"""
-primitve data
-integer,
-float,
-complex (e.g: 1 + 2j)
-"""
+word = "excelent"
+print(word)
+#change to uppercase
+word = word.upper()
+print(word)
 
-#string
-name = "perseus evans"
-print(name)
-#there is 3 method to call string like concatenate
-#1. Formatted string
-print(f"hello guys, my name {name}\n")
-#2. %-Formatting
-print("my name %s \n" %name)
-#3. str.format
-print("my name is {} \n".format(name))
+#change to lowercase
+word = word.lower()
+print(word)
+
+#how to delete whitespace or other char or word
+#if whitescape on right use .rstrip()
+#if whitespace on left use .lstrip()
+#if want to delete on both side use strip()
+#if want to delete a char or word use variable.strip('word wan to delete') this only work if the word only in start
+#or end of line.
+greeting = "good morning folks 123"
+#i want to delete 123 from greeting
+print(greeting.strip(" 123 "))
 
 
-#data collection
+#join string
+print(' '.join(['Hello','World','Happy','Holiyay']))
 
-#list
-#list like an array in other language
-name2 = 'liza'
-my_list = [1, "january", 1.2]
-print(my_list)
-print(name2 + " " + my_list[1])
+#to split string
+print('Hello world happy fasting'.split())
+#this method split string into some string and save into list
 
-#dictionary
-x = {'name' : 'andi', 'age' : 30, 'gender' : 'male'}
-print(x)#print value of x
-print(x['name']) #print value of key name 
-#how to change value of key name
-x['name'] ='george'
-print(x)
-print(x['name'])
+#to change specific char or word
+word3 = "burger, i burger like sandwich and burger"
+print(word3.replace("burger", "Pizza"))
