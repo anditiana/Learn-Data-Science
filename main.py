@@ -1,54 +1,47 @@
-#Looping
+#error handling
 
-var_list = [1,2,3,4,5,6,7,8,9,10]
-var_char = ['A','B','C','D','E']
-for i in var_list:
- print(i)
-
-print("\n")
-for i in var_char :
- print(i)
-
-print('\n')
-#for in range
-#range(start, stop, step)
-#default range(stop) or range(star,stop)
-#stop not include
-for i in range(1, 20, 2):
- print(i)
-
-print("==============")
-#======================================
-#while
-
-counter = 1
-while counter <= 5:
- print(counter)
- counter += 1
+#try except
+#e.g simple error handling
+z = 0
+try : 
+ print(1/z)
+except ZeroDivisionError:
+ print("You can't divide by 0")
 
 
-#for else
-number = [1,2,3,4,5]
-for num in number :
- if num == 9:
-  print(f"w get {num}")
-  break
-else :
- print('number not found')
+#the comple error handling
 
-#if num has 3, program will execute w get 3, and then looping stop, else print number not found
-print("==============")
+p = 2
+try:
+ result = 10 / 0
+except ZeroDivisionError:
+ print("You can't divide by 0")
+else:
+ print("Result:", result)
+finally:
+ print("Finish.")
 
-#list comprehension 
-num1 = [1, 2, 3, 4]
-sq = []
-for n in num1:
-  sq.append(n**2)
-print(sq)
-#this is old 
-#we can use this : new_;ist = [expression, for loop]
-#in this example expression is n**2
-print("new style")
-num2 = [1, 2, 3, 4]
-sq2 = [n**2 for n in num2]
-print(sq2)
+#error handling with more than one except
+
+var_dict = {"average" : "1.0"}
+
+try : 
+ print(f"average {var_dict['average']}")
+except KeyError :
+ print("Key not found")
+except TypeError:
+ print("you can't divide number with string")
+else:
+ print("Your code is work")
+finally:
+ print("End of program")
+ 
+#Raise
+var = -1
+
+if var < 0:
+ raise ValueError("negative number is forbidden")
+else:
+ for i in range(var):
+     print(i+1)
+  
