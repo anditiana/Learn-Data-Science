@@ -1,47 +1,38 @@
-#error handling
-
-#try except
-#e.g simple error handling
-z = 0
-try : 
- print(1/z)
-except ZeroDivisionError:
- print("You can't divide by 0")
+#array
+'''
+there is 2 method to use array,
+first we can use list as array
+or, we can add module array i.e from NumPy
+'''
 
 
-#the comple error handling
+#array using list
 
-p = 2
-try:
- result = 10 / 0
-except ZeroDivisionError:
- print("You can't divide by 0")
-else:
- print("Result:", result)
-finally:
- print("Finish.")
+var_array = [1,2,3,4,5,6]
+length_arr = len(var_array)
+print(f"Array = {var_array}")
+print(f"Array length = {length_arr}")
 
-#error handling with more than one except
+#we can use list comperhension to set default value
+var_arr = [0 for i in range(10)]
+print(var_arr)
 
-var_dict = {"average" : "1.0"}
+#and then we can set value 
+for index in range(10):
+ var_arr[index] = index + 1
 
-try : 
- print(f"average {var_dict['average']}")
-except KeyError :
- print("Key not found")
-except TypeError:
- print("you can't divide number with string")
-else:
- print("Your code is work")
-finally:
- print("End of program")
- 
-#Raise
-var = -1
+print(f"New Array = {var_arr}")
 
-if var < 0:
- raise ValueError("negative number is forbidden")
-else:
- for i in range(var):
-     print(i+1)
+
+#array exercise
+#find a highest number in array
+my_arr = [1,7,2,89,3]
+left_pointer = my_arr[0]
+
+for i in range(1, len(my_arr)):
+ right_pointer = my_arr[i]
+ if right_pointer > left_pointer:
+  left_pointer = right_pointer
+
+print(left_pointer)
   
