@@ -1,16 +1,23 @@
-#Day-5-Array Challenge
-'''
-there is an array from 0 to 101
-calculate the average value of array
-store the value in result
-'''
+#matrix challenge
 
-var_array = [i for i in range(0,101)]
+#1. matrix times 2
 
-temp_value = 0
-for i in range(len(var_array)):
- temp_value += var_array[i]
+var_mat = [[5,0],
+          [1,-2]]
 
-result = temp_value/len(var_array)
+result_mat = [[0 for column in range(2)] for row in range(2)]
 
+for row in range(len(var_mat)):
+ for column in range(len(var_mat)):
+  result_mat[row][column] = var_mat[row][column]*2
+
+print(result_mat)
+
+
+#for easiest way we can use numpy lib
+import numpy as np
+var_mat2 = np.array([[5, 0],
+ [1, -2]])
+
+result = var_mat2 * 2
 print(result)
