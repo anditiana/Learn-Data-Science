@@ -8,7 +8,7 @@ var_mat = [[5,0],
 result_mat = [[0 for column in range(2)] for row in range(2)]
 
 for row in range(len(var_mat)):
- for column in range(len(var_mat)):
+ for column in range(len(var_mat[0])):
   result_mat[row][column] = var_mat[row][column]*2
 
 print(result_mat)
