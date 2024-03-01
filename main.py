@@ -1,23 +1,43 @@
-#matrix challenge
+#Function
+#build function
 
-#1. matrix times 2
+def rectangle_area(length, width):
+ rec_area = length * width
+ return rec_area
 
-var_mat = [[5,0],
-          [1,-2]]
-
-result_mat = [[0 for column in range(2)] for row in range(2)]
-
-for row in range(len(var_mat)):
- for column in range(len(var_mat[0])):
-  result_mat[row][column] = var_mat[row][column]*2
-
-print(result_mat)
+#call function
+result = rectangle_area(3,5)
+print(f"{result} \n================")
 
 
-#for easiest way we can use numpy lib
-import numpy as np
-var_mat2 = np.array([[5, 0],
- [1, -2]])
+#keyword argumen
+#we call keyword argumen when we define parameter with value
+#f(x=a) = 2x
 
-result = var_mat2 * 2
-print(result)
+result2 = rectangle_area(length=4, width= 4)
+print(f"{result2}\n================")
+
+
+#parameter
+
+#1. parameter positional only
+# def function_name(param1, param2, /)
+
+def triangle_area(a,b,/):
+ return (a*b)/2
+
+print(f"triangle area : {triangle_area(3,4)}\n================")
+#but if we define the parameter while call function it cause error
+# e.g : triangle_area(a=3, b=4) ===> it cause error
+
+
+#2. parameter keyword only
+#when call function parameter value must define
+def greeting(*, name, message):
+ print(f"Hello {name}, {message}\n================")
+
+#parameter has value 
+greeting(name="lirio", message="good moorning")
+
+#not define value in parameter causing error
+#e.g greeting(name, message)
