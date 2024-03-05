@@ -1,15 +1,40 @@
-#procedur
-#like function, procedure allow to have return values or not
-#allow to have parameter or not
+#create a class
+class Car:
+ #class without method
+ #Attribute
+ color = "Red"
 
-def greeting():
- print("Good morning")
+#define object
+#make a variable to have trait same as Car
+car_1 = Car()
 
-greeting()
+#to access attribute in Car class
+print(car_1.color)
 
-#we can add return wihtout return value
-def danger():
- print("Please be careful!!")
- return
+car_1.color = "Yellow"
+print(car_1.color)
 
-danger()
+
+#class constructor
+class MotorCycle:
+ def __init__(self):
+  self.color = "Blue"
+
+myMotor = MotorCycle()
+
+print(f"{myMotor.color}\n==========")
+
+#with parameter
+class SportCar:
+ def __init__(self, color, brand, type):
+  self.color = color
+  self.brand = brand
+  self.type = type
+
+myCar_1 = SportCar("red","BMW","Electric Vehicle")
+
+print(myCar_1.color)
+print(myCar_1.brand)
+print(f"{myCar_1.type}\n==========")
+
+ 
