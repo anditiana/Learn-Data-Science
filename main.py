@@ -8,14 +8,14 @@ class TestStringMethods(unittest.TestCase):
   self.assertTrue('c0d1ng'.isalnum())
   self.assertFalse('c0d!ng'.isalnum())
 
- # Test case ketiga (3)
+ 
  def test_index(self):
   s = 'dicoding'
   self.assertEqual(s.index('coding'), 2)
-  # cek s.index gagal ketika tidak ditemukan
+  
   with self.assertRaises(ValueError):
       s.index('decode')
 
+#usually this is how to run unittest
 if __name__ == '__main__':
- # Test Runner
  unittest.main()
